@@ -1,8 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { BookingButton } from "@/components/ui/booking-button"
 import { ChevronRight, MapPin, Clock, Phone, Mail } from "lucide-react"
-import { LazyImage } from "@/components/lazy-image"
 
 export default function Home() {
   return (
@@ -29,9 +29,15 @@ export default function Home() {
             and rejuvenating foot soaks.
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-4">
-            <Button className="w-full bg-teal-700 px-6 hover:bg-teal-800 sm:w-auto">Book an Appointment</Button>
-            <Button variant="outline" className="w-full border-teal-200 text-teal-700 sm:w-auto">
-              Explore Our Services <ChevronRight className="ml-2 h-4 w-4" />
+            <BookingButton className="w-full sm:w-auto">
+              Book an Appointment
+            </BookingButton>
+            <Button
+              asChild
+              variant="outline"
+              className="w-full border-teal-200 text-teal-700 sm:w-auto"
+            >
+              <Link href="#services">Explore Our Services <ChevronRight className="ml-2 h-4 w-4" /></Link>
             </Button>
           </div>
         </div>
@@ -74,7 +80,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="bg-teal-50 px-4 py-12 sm:py-20">
+      <section id="services" className="min-h-screen bg-teal-50 px-4 py-12 sm:py-20">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-center font-serif text-2xl font-light text-teal-900 sm:text-3xl">
             Our Signature Services
@@ -107,14 +113,13 @@ export default function Home() {
             {/* Therapeutic Massage */}
             <div className="rounded-lg bg-white p-4 shadow-sm transition-all hover:shadow-md sm:p-6">
               <div className="mb-3 h-40 overflow-hidden rounded-md sm:h-48 sm:mb-4">
-                <LazyImage
+                <Image
                   src="/serene-touch.png"
                   alt="Therapeutic Massage"
                   width={600}
                   height={400}
                   className="h-full w-full object-cover"
                   sizes="(min-width: 768px) 33vw, 100vw"
-                  lowQualitySrc="/relaxing-massage.png"
                 />
               </div>
               <h3 className="font-serif text-lg font-medium text-teal-900 sm:text-xl">Therapeutic Massage</h3>
@@ -128,14 +133,13 @@ export default function Home() {
             {/* Foot Soak & Reflexology */}
             <div className="rounded-lg bg-white p-4 shadow-sm transition-all hover:shadow-md sm:p-6">
               <div className="mb-3 h-40 overflow-hidden rounded-md sm:h-48 sm:mb-4">
-                <LazyImage
+                <Image
                   src="/minimalist-foot-spa.png"
                   alt="Foot Soak & Reflexology"
                   width={600}
                   height={400}
                   className="h-full w-full object-cover"
                   sizes="(min-width: 768px) 33vw, 100vw"
-                  lowQualitySrc="/relaxing-foot-soak.png"
                 />
               </div>
               <h3 className="font-serif text-lg font-medium text-teal-900 sm:text-xl">Foot Soak & Reflexology</h3>
@@ -148,13 +152,18 @@ export default function Home() {
           </div>
 
           <div className="mt-8 text-center sm:mt-10">
-            <Button className="w-full bg-teal-700 px-6 hover:bg-teal-800 sm:w-auto">View All Services</Button>
+            <Button
+              asChild
+              className="w-full bg-teal-700 px-6 hover:bg-teal-800 sm:w-auto"
+            >
+              <Link href="/services">View All Services</Link>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="bg-white px-4 py-12 sm:py-20">
+      {/* <section className="bg-white px-4 py-12 sm:py-20">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-center font-serif text-2xl font-light text-teal-900 sm:text-3xl">Client Experiences</h2>
 
@@ -176,7 +185,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact & Location */}
       <section className="bg-teal-50 px-4 py-12 sm:py-20">
@@ -212,7 +221,7 @@ export default function Home() {
                   <Phone className="mr-3 h-5 w-5 text-teal-700" />
                   <div>
                     <p className="font-medium text-teal-900">Phone</p>
-                    <p className="text-sm text-slate-600 sm:text-base">(555) 123-4567</p>
+                    <p className="text-sm text-slate-600 sm:text-base">(863) 605-3045</p>
                   </div>
                 </div>
 
@@ -220,24 +229,23 @@ export default function Home() {
                   <Mail className="mr-3 h-5 w-5 text-teal-700" />
                   <div>
                     <p className="font-medium text-teal-900">Email</p>
-                    <p className="text-sm text-slate-600 sm:text-base">info@thecovespa.com</p>
+                    <p className="text-sm text-slate-600 sm:text-base">thecovesanctuary@gmail.com</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-6 sm:mt-8">
-                <Button className="w-full bg-teal-700 px-6 hover:bg-teal-800 sm:w-auto">Book Your Experience</Button>
+                <BookingButton className="w-full bg-teal-700 px-6 hover:bg-teal-800 sm:w-auto">Book Your Experience</BookingButton>
               </div>
             </div>
 
             <div className="relative h-[250px] w-full overflow-hidden rounded-lg sm:h-[300px] md:h-[400px] md:w-1/2">
-              <LazyImage
+              <Image
                 src="/teal-tranquility.png"
                 alt="The Cove Spa Interior"
                 fill
                 className="object-cover"
                 sizes="(min-width: 768px) 50vw, 100vw"
-                lowQualitySrc="/tranquil-spa-retreat.png"
               />
             </div>
           </div>

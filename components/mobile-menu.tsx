@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { BookingButton } from "@/components/ui/booking-button"
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
@@ -31,15 +32,18 @@ export function MobileMenu() {
             <Link href="#" className="text-sm text-slate-600 hover:text-teal-700" onClick={() => setIsOpen(false)}>
               Services
             </Link>
-            <Link href="#" className="text-sm text-slate-600 hover:text-teal-700" onClick={() => setIsOpen(false)}>
+            {/* <Link href="#" className="text-sm text-slate-600 hover:text-teal-700" onClick={() => setIsOpen(false)}>
               Testimonials
-            </Link>
+            </Link> */}
             <Link href="#" className="text-sm text-slate-600 hover:text-teal-700" onClick={() => setIsOpen(false)}>
               Contact
             </Link>
-            <Button className="w-full bg-teal-700 hover:bg-teal-800" onClick={() => setIsOpen(false)}>
+            <BookingButton 
+              className="w-full"
+              onClick={() => setIsOpen(false)}
+            >
               Book Now
-            </Button>
+            </BookingButton>
           </div>
         </div>
       )}

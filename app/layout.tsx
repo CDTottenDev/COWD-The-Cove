@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter, Cormorant } from "next/font/google"
 import "./globals.css"
 import { MobileMenu } from "@/components/mobile-menu"
+import { BookingButton } from "@/components/ui/booking-button"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -36,29 +37,26 @@ export default function RootLayout({
               The Cove
             </a>
             <nav className="hidden space-x-6 md:flex">
-              <a href="#" className="text-sm text-slate-600 hover:text-teal-700">
+              <a href="/" className="text-sm text-slate-600 hover:text-teal-700">
                 Home
               </a>
-              <a href="#" className="text-sm text-slate-600 hover:text-teal-700">
+              <a href="/about" className="text-sm text-slate-600 hover:text-teal-700">
                 About
               </a>
-              <a href="#" className="text-sm text-slate-600 hover:text-teal-700">
+              <a href="/services" className="text-sm text-slate-600 hover:text-teal-700">
                 Services
               </a>
-              <a href="#" className="text-sm text-slate-600 hover:text-teal-700">
+              {/* <a href="/testimonials" className="text-sm text-slate-600 hover:text-teal-700">
                 Testimonials
-              </a>
-              <a href="#" className="text-sm text-slate-600 hover:text-teal-700">
+              </a> */}
+              <a href="/contact" className="text-sm text-slate-600 hover:text-teal-700">
                 Contact
               </a>
             </nav>
             <div className="flex items-center gap-2">
-              <a
-                href="#"
-                className="hidden rounded-md bg-teal-700 px-4 py-2 text-sm font-medium text-white hover:bg-teal-800 sm:block"
-              >
-                Book Now
-              </a>
+              <div className="hidden sm:block">
+                <BookingButton>Book Now</BookingButton>
+              </div>
               <MobileMenu />
             </div>
           </div>
