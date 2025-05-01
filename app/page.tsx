@@ -370,6 +370,19 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <div className="w-full bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 py-4 text-center">
+        <p className="text-xs text-gray-600 sm:text-sm">
+          Designed with 💖 by{" "}
+          <a 
+            href="https://cdtottendev.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="font-medium text-purple-600 transition-colors hover:text-pink-600 underline decoration-dotted underline-offset-2"
+          >
+            Colt Totten
+          </a>
+        </p>
+      </div>
     </div>
   )
 }
