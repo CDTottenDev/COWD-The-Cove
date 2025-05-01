@@ -22,28 +22,22 @@ export function MobileMenu() {
 
       {isOpen && (
         <div className="absolute left-0 top-full z-50 w-full bg-white py-4 shadow-md md:hidden">
-          <div className="container mx-auto flex max-w-5xl flex-col space-y-4 px-4">
-            <Link href="#" className="text-sm text-slate-600 hover:text-teal-700" onClick={() => setIsOpen(false)}>
+          <div className="container mx-auto flex max-w-5xl flex-row justify-center items-center space-x-6 px-4">
+            <Link href="/" className="text-lg text-slate-600 hover:text-teal-700 text-center" onClick={() => setIsOpen(false)}>
               Home
             </Link>
-            <Link href="#" className="text-sm text-slate-600 hover:text-teal-700" onClick={() => setIsOpen(false)}>
+            <Link href="/#about" className="text-lg text-slate-600 hover:text-teal-700 text-center" onClick={() => setIsOpen(false)}>
               About
             </Link>
-            <Link href="#" className="text-sm text-slate-600 hover:text-teal-700" onClick={() => setIsOpen(false)}>
+            <Link href="/services" className="text-lg text-slate-600 hover:text-teal-700 text-center" onClick={() => setIsOpen(false)}>
               Services
             </Link>
-            {/* <Link href="#" className="text-sm text-slate-600 hover:text-teal-700" onClick={() => setIsOpen(false)}>
+            {/* <Link href="#" className="text-lg text-slate-600 hover:text-teal-700 text-center" onClick={() => setIsOpen(false)}>
               Testimonials
             </Link> */}
-            <Link href="#" className="text-sm text-slate-600 hover:text-teal-700" onClick={() => setIsOpen(false)}>
+            <Link href="/#contact" className="text-lg text-slate-600 hover:text-teal-700 text-center" onClick={() => setIsOpen(false)}>
               Contact
             </Link>
-            <BookingButton 
-              className="w-full"
-              onClick={() => setIsOpen(false)}
-            >
-              Book Now
-            </BookingButton>
           </div>
         </div>
       )}

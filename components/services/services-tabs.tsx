@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { ServiceCard } from "./service-card"
+import Image from "next/image"
 
 // Declare the scrollTimeout property on the Window interface
 declare global {
@@ -18,19 +19,14 @@ const treatments = {
       image: "/head-treatment-ring.jpg",
     },
     {
-      title: "Mothers Day Head to Soul Bliss",
-      description: "Treat the special woman in your life to our luxurious Mother's Day package combining our most popular treatments. Beginning with The Cove Signature Head Spa that refreshes both scalp and spirit through personalized aromatherapy and botanical treatments, followed by our Rose Tidal Foot Soak that features dried rose petals and lavender in a mineral-rich bath. This head-to-toe experience provides the perfect balance of relaxation and rejuvenation.",
-      image: "/head-treatment-ring.jpg"
+      title: "The Tranquil Steps",
+      description: "Start with a therapeutic foot soak infused with essential oils and soothing salts to detoxify and soften tired feet. Then ease into a customized full-body massage that releases built-up stress and leaves you feeling light and renewed. The ultimate relaxation for body and soul.",
+      image: "/head-treatment-ring.jpg",
     },
     {
-      title: "Mothers Day Soak and Massage",
-      description: "Pamper your mother with our special day package combining two of our most popular treatments. Begin with our Rose Tidal Foot Soak, where dried rose petals and lavender buds swirl in a warm, mineral-rich bath to soften skin and quiet the mind. Then experience The Cove Custom Blend Massage, a fully personalized massage tailored to her unique needs with the perfect pressure, soothing hot stones, and cupping therapy for a truly restorative experience that will leave her feeling balanced and renewed.",
-      image: "/head-treatment-ring.jpg"
-    },
-    {
-      title: "Mothers Retreat",
-      description: "Indulge in our Mother's Retreat package, combining The Cove Custom Blend Massage and The Cove Signature Head Spa for the ultimate relaxation experience. Begin with our personalized massage that incorporates your preferred pressure, soothing hot stones, and cupping therapy to release tension and restore balance. Then transition to our luxurious head spa featuring aromatherapy, gentle exfoliation, and a botanical hair rinse with oil scalp massage. This comprehensive treatment refreshes both body and mind, creating a truly restorative sanctuary for mothers.",
-      image: "/head-treatment-ring.jpg"
+      title: "The Serenity Duo",
+      description: "Melt away tension with a deeply relaxing full-body massage, tailored to your needs, followed by a luxurious Japanese Head Spa treatment designed to cleanse, rejuvenate, and invigorate your scalp and mind. This perfect pairing delivers full-body renewal and head-to-toe tranquility.",
+      image: "/head-treatment-ring.jpg",
     }
   ],
   spa: [
@@ -110,13 +106,35 @@ const treatments = {
       description: "Experience the ancient art of facial cupping with our specialized massage add-on. This gentle suction technique helps stimulate circulation, reduce puffiness, and enhance your skin's natural glow. The rhythmic movements promote collagen production, soften fine lines, and create a lifting effect. Perfect for those seeking both relaxation and rejuvenation, this treatment leaves your skin looking refreshed and radiant while providing a deeply soothing experience.",
       image: "/services/facial-cupping-facial-massage.jpg"
     }
+  ],
+  specials: [
+    {
+      title: "Midday Melt",
+      description: "(Available Mondays only, 11am-1pm By Appointment Only) Take a break form the busy day and treat yourself to a refreshing 30-minute massage designed to melt away tension and rechare your body and mind. Perfect for a quesck reset during your lunch hour-- you'll leave feeling lighter, calmer and ready to take on the rest of your day.",
+      image: "/head-treatment-ring.jpg"
+    },
+    {
+      title: "Mothers Day Head to Soul Bliss",
+      description: "Treat the special woman in your life to our luxurious Mother's Day package combining our most popular treatments. Beginning with The Cove Signature Head Spa that refreshes both scalp and spirit through personalized aromatherapy and botanical treatments, followed by our Rose Tidal Foot Soak that features dried rose petals and lavender in a mineral-rich bath. This head-to-toe experience provides the perfect balance of relaxation and rejuvenation.",
+      image: "/head-treatment-ring.jpg"
+    },
+    {
+      title: "Mothers Day Soak and Massage",
+      description: "Pamper your mother with our special day package combining two of our most popular treatments. Begin with our Rose Tidal Foot Soak, where dried rose petals and lavender buds swirl in a warm, mineral-rich bath to soften skin and quiet the mind. Then experience The Cove Custom Blend Massage, a fully personalized massage tailored to her unique needs with the perfect pressure, soothing hot stones, and cupping therapy for a truly restorative experience that will leave her feeling balanced and renewed.",
+      image: "/head-treatment-ring.jpg"
+    },
+    {
+      title: "Mothers Retreat",
+      description: "Indulge in our Mother's Retreat package, combining The Cove Custom Blend Massage and The Cove Signature Head Spa for the ultimate relaxation experience. Begin with our personalized massage that incorporates your preferred pressure, soothing hot stones, and cupping therapy to release tension and restore balance. Then transition to our luxurious head spa featuring aromatherapy, gentle exfoliation, and a botanical hair rinse with oil scalp massage. This comprehensive treatment refreshes both body and mind, creating a truly restorative sanctuary for mothers.",
+      image: "/head-treatment-ring.jpg"
+    }
   ]
 } as const
 
 type TreatmentType = keyof typeof treatments
 
 export function ServicesTabs() {
-  const [activeTab, setActiveTab] = useState<TreatmentType>('packages')
+  const [activeTab, setActiveTab] = useState<TreatmentType>('specials')
   const [isScrolling, setIsScrolling] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
@@ -150,84 +168,120 @@ export function ServicesTabs() {
 
   const handleTabChange = (tab: TreatmentType) => {
     setActiveTab(tab)
-    // Smooth scroll to the services section
-    const servicesSection = document.getElementById('services-section')
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth' })
+    // Smooth scroll to the tabs section with navbar offset
+    const tabsSection = document.getElementById('tabs-section')
+    if (tabsSection) {
+      const navbarHeight = 80 // Adjust this value based on your navbar height
+      const elementPosition = tabsSection.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.scrollY - navbarHeight
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
     }
   }
 
   return (
-    <>
-      {/* Tabs */}
-      <div className="container mx-auto px-4 py-4 sm:py-8">
-        <div className={`flex ${isMobile ? 'flex-col space-y-2' : 'flex-row justify-center space-x-4'}`}>
-          <button
-            onClick={() => handleTabChange('packages')}
-            className={`w-full sm:w-auto px-4 sm:px-6 py-2 rounded-full transition-all duration-300 ${
-              activeTab === 'packages'
-                ? 'bg-teal-600 text-white scale-105'
-                : 'bg-teal-100 text-teal-700 hover:bg-teal-200'
-            }`}
-          >
-            Packages
-          </button>
-          <button
-            onClick={() => handleTabChange('spa')}
-            className={`w-full sm:w-auto px-4 sm:px-6 py-2 rounded-full transition-all duration-300 ${
-              activeTab === 'spa'
-                ? 'bg-teal-600 text-white scale-105'
-                : 'bg-teal-100 text-teal-700 hover:bg-teal-200'
-            }`}
-          >
-            Spa Treatments
-          </button>
-          <button
-            onClick={() => handleTabChange('massage')}
-            className={`w-full sm:w-auto px-4 sm:px-6 py-2 rounded-full transition-all duration-300 ${
-              activeTab === 'massage'
-                ? 'bg-teal-600 text-white scale-105'
-                : 'bg-teal-100 text-teal-700 hover:bg-teal-200'
-            }`}
-          >
-            Massage Treatments
-          </button>
-          <button
-            onClick={() => handleTabChange('feet')}
-            className={`w-full sm:w-auto px-4 sm:px-6 py-2 rounded-full transition-all duration-300 ${
-              activeTab === 'feet'
-                ? 'bg-teal-600 text-white scale-105'
-                : 'bg-teal-100 text-teal-700 hover:bg-teal-200'
-            }`}
-          >
-            Foot Soaks
-          </button>
-          <button
-            onClick={() => handleTabChange('addons')}
-            className={`w-full sm:w-auto px-4 sm:px-6 py-2 rounded-full transition-all duration-300 ${
-              activeTab === 'addons'
-                ? 'bg-teal-600 text-white scale-105'
-                : 'bg-teal-100 text-teal-700 hover:bg-teal-200'
-            }`}
-          >
-            Add-Ons
-          </button>
-        </div>
+    <div className="relative">
+      {/* Background Image */}
+      <div className="fixed inset-0 z-0">
+        <Image
+          src={`/${activeTab === 'packages' ? 'packages' : 
+                activeTab === 'spa' ? 'spa-treatments' :
+                activeTab === 'massage' ? 'massage-treatment' :
+                activeTab === 'feet' ? 'foot-soaks' :
+                'addons'}.svg`}
+          alt="Background image"
+          fill
+          className="object-cover opacity-10"
+          sizes="100vw"
+          loading="lazy"
+          quality={75}
+        />
       </div>
 
-      {/* Services Grid */}
-      <section id="services-section" className="container mx-auto px-4 py-8 sm:py-16 md:py-24">
-        <div className={`grid gap-6 sm:gap-8 max-w-2xl mx-auto transition-opacity duration-300 ${isScrolling ? 'opacity-75' : 'opacity-100'}`}>
-          {treatments[activeTab].map((treatment, index) => (
-            <ServiceCard
-              key={index}
-              title={treatment.title}
-              description={treatment.description}
-              image={treatment.image}
-            />
-          ))}
+      {/* Content */}
+      <div className="relative z-10">
+        {/* Tabs */}
+        <div id="tabs-section" className="container mx-auto px-4 py-4 sm:py-8">
+          <div className={`flex ${isMobile ? 'flex-col space-y-2' : 'flex-row justify-center space-x-4'}`}>
+            <button
+              onClick={() => handleTabChange('packages')}
+              className={`w-full sm:w-auto px-4 sm:px-6 py-2 rounded-full transition-all duration-300 ${
+                activeTab === 'packages'
+                  ? 'bg-teal-600 text-white scale-105'
+                  : 'bg-teal-100 text-teal-700 hover:bg-teal-200'
+              }`}
+            >
+              Packages
+            </button>
+            <button
+              onClick={() => handleTabChange('spa')}
+              className={`w-full sm:w-auto px-4 sm:px-6 py-2 rounded-full transition-all duration-300 ${
+                activeTab === 'spa'
+                  ? 'bg-teal-600 text-white scale-105'
+                  : 'bg-teal-100 text-teal-700 hover:bg-teal-200'
+              }`}
+            >
+              Head Spa Treatments
+            </button>
+            <button
+              onClick={() => handleTabChange('massage')}
+              className={`w-full sm:w-auto px-4 sm:px-6 py-2 rounded-full transition-all duration-300 ${
+                activeTab === 'massage'
+                  ? 'bg-teal-600 text-white scale-105'
+                  : 'bg-teal-100 text-teal-700 hover:bg-teal-200'
+              }`}
+            >
+              Massage Treatments
+            </button>
+            <button
+              onClick={() => handleTabChange('feet')}
+              className={`w-full sm:w-auto px-4 sm:px-6 py-2 rounded-full transition-all duration-300 ${
+                activeTab === 'feet'
+                  ? 'bg-teal-600 text-white scale-105'
+                  : 'bg-teal-100 text-teal-700 hover:bg-teal-200'
+              }`}
+            >
+              Foot Soaks
+            </button>
+            <button
+              onClick={() => handleTabChange('addons')}
+              className={`w-full sm:w-auto px-4 sm:px-6 py-2 rounded-full transition-all duration-300 ${
+                activeTab === 'addons'
+                  ? 'bg-teal-600 text-white scale-105'
+                  : 'bg-teal-100 text-teal-700 hover:bg-teal-200'
+              }`}
+            >
+              Add-Ons
+            </button>
+            <button
+              onClick={() => handleTabChange('specials')}
+              className={`w-full sm:w-auto px-4 sm:px-6 py-2 rounded-full transition-all duration-300 ${
+                activeTab === 'specials'
+                  ? 'bg-teal-600 text-white scale-105'
+                  : 'bg-teal-100 text-teal-700 hover:bg-teal-200'
+              }`}
+            >
+              Specials
+            </button>
+          </div>
         </div>
-      </section>
-    </>
+
+        {/* Services Grid */}
+        <section id="services-section" className="container mx-auto px-4 py-8 sm:py-16 md:py-24">
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mx-auto transition-opacity duration-300 ${isScrolling ? 'opacity-75' : 'opacity-100'}`}>
+            {treatments[activeTab].map((treatment, index) => (
+              <ServiceCard
+                key={index}
+                title={treatment.title}
+                description={treatment.description}
+              />
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
   )
 } 

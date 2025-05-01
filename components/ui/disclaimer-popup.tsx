@@ -39,6 +39,9 @@ export function DisclaimerPopup({ isOpen, onClose, onConfirm }: DisclaimerPopupP
         <p className="text-teal-700 mb-6">
           If pregnant please see our pre-natal massage service, as services can only be performed on 2nd and 3rd trimester of pregnancy.
         </p>
+        <p className="text-teal-700 mb-6">
+          We can not perform head spa services on guests with extensions, locks and sew-ins. As they obstruct access to the scalp.
+        </p>
         <div className="flex justify-end space-x-4">
           <button
             onClick={onConfirm}

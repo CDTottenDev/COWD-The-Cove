@@ -2,33 +2,32 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { BookingButton } from "@/components/ui/booking-button"
-import { ChevronRight, MapPin, Clock, Phone, Mail } from "lucide-react"
+import { ChevronRight, MapPin, Clock, Phone, Mail, Instagram } from "lucide-react"
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center overflow-hidden bg-teal-50 px-4 py-16 sm:py-24 md:py-32">
-        <div className="absolute inset-0 z-0 opacity-10">
+      <section className="relative flex h-screen min-h-[600px] flex-col items-center justify-center overflow-hidden px-4">
+        <div className="absolute inset-0 z-0">
           <Image
-            src="/zen-water-stones.png"
+            src="/abstract-ocean.svg"
             alt="Background pattern"
             fill
-            className="object-cover"
+            className="object-cover opacity-20"
             priority
-            sizes="100vw"
           />
         </div>
-        <div className="container relative z-10 mx-auto max-w-5xl text-center">
-          <h1 className="font-serif text-3xl font-light tracking-tight text-teal-900 sm:text-4xl md:text-6xl">
+        <div className="container relative z-10 mx-auto max-w-5xl text-center bg-teal-50 opacity-80 p-8">
+          <h1 className="font-serif text-4xl font-light tracking-tight text-teal-900 sm:text-5xl md:text-6xl lg:text-7xl">
             The Cove
           </h1>
-          <p className="mt-2 text-lg font-light text-teal-700 sm:text-xl md:text-2xl">A Sanctuary of Wellness</p>
-          <p className="mx-auto mt-4 max-w-2xl text-sm text-teal-600 sm:mt-6 sm:text-base">
+          <p className="mt-4 text-xl font-light text-teal-700 sm:text-2xl md:text-3xl">A Sanctuary of Wellness</p>
+          <p className="mx-auto mt-6 max-w-2xl text-base text-teal-600 sm:text-lg md:text-xl">
             Experience the art of relaxation through our signature Japanese head spa treatments, therapeutic massages,
             and rejuvenating foot soaks.
           </p>
-          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-4">
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
             <BookingButton className="w-full sm:w-auto">
               Book an Appointment
             </BookingButton>
@@ -37,32 +36,37 @@ export default function Home() {
               variant="outline"
               className="w-full border-teal-200 text-teal-700 sm:w-auto"
             >
-              <Link href="#services">Explore Our Services <ChevronRight className="ml-2 h-4 w-4" /></Link>
+              <Link href="#services" className="flex items-center justify-center gap-2">
+                Explore Our Services
+                <ChevronRight className="h-4 w-4" />
+              </Link>
             </Button>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="bg-white px-4 py-12 sm:py-20">
+      <section id="about" className="bg-white px-4 py-12 sm:py-20">
         <div className="container mx-auto max-w-5xl">
           <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
             <div className="relative h-[300px] w-full overflow-hidden rounded-lg sm:h-[400px] md:w-1/2">
               <Image
-                src="/serene-spa-massage.png"
+                src="/alexandra-about.jpg"
                 alt="Alexandra Cortez, Massage Specialist"
                 fill
                 className="object-cover"
                 sizes="(min-width: 768px) 50vw, 100vw"
+                loading="lazy"
+                quality={75}
               />
             </div>
             <div className="md:w-1/2">
               <h2 className="font-serif text-2xl font-light text-teal-900 sm:text-3xl">Meet Your Therapist</h2>
               <p className="mt-2 text-lg font-medium text-teal-700">Alexandra Cortez</p>
-              <p className="mt-1 text-sm text-teal-600">8 Years of Specialized Experience</p>
+              <p className="mt-1 text-sm text-teal-600">6 Years of Specialized Experience</p>
               <div className="mt-4 space-y-3 text-sm text-slate-600 sm:mt-6 sm:space-y-4 sm:text-base">
                 <p>
-                  With over 8 years of dedicated practice in therapeutic massage and specialized training in Japanese
+                  With over 6 years of dedicated practice in therapeutic massage and specialized training in Japanese
                   head spa techniques, Alexandra brings a wealth of expertise to every session.
                 </p>
                 <p>
@@ -94,12 +98,14 @@ export default function Home() {
             <div className="rounded-lg bg-white p-4 shadow-sm transition-all hover:shadow-md sm:p-6">
               <div className="mb-3 h-40 overflow-hidden rounded-md sm:h-48 sm:mb-4">
                 <Image
-                  src="/serene-scalp-care.png"
+                  src="/headspa-sink-2.jpg"
                   alt="Japanese Head Spa"
                   width={600}
                   height={400}
                   className="h-full w-full object-cover"
                   sizes="(min-width: 768px) 33vw, 100vw"
+                  loading="lazy"
+                  quality={75}
                 />
               </div>
               <h3 className="font-serif text-lg font-medium text-teal-900 sm:text-xl">Japanese Head Spa</h3>
@@ -107,19 +113,21 @@ export default function Home() {
                 Our specialty treatment combines scalp massage, pressure point therapy, and aromatherapy to release
                 tension and promote deep relaxation.
               </p>
-              <p className="mt-3 text-sm font-medium text-teal-700 sm:mt-4">60 min | 90 min</p>
+              <p className="flex justify-center mt-3 text-sm font-medium text-teal-700 sm:mt-4">60 min | 90 min</p>
             </div>
 
             {/* Therapeutic Massage */}
             <div className="rounded-lg bg-white p-4 shadow-sm transition-all hover:shadow-md sm:p-6">
               <div className="mb-3 h-40 overflow-hidden rounded-md sm:h-48 sm:mb-4">
                 <Image
-                  src="/serene-touch.png"
+                  src="/massage-room-2.jpg"
                   alt="Therapeutic Massage"
                   width={600}
                   height={400}
                   className="h-full w-full object-cover"
                   sizes="(min-width: 768px) 33vw, 100vw"
+                  loading="lazy"
+                  quality={75}
                 />
               </div>
               <h3 className="font-serif text-lg font-medium text-teal-900 sm:text-xl">Therapeutic Massage</h3>
@@ -127,19 +135,21 @@ export default function Home() {
                 A customized massage experience targeting specific areas of tension using a blend of techniques to
                 alleviate pain and improve mobility.
               </p>
-              <p className="mt-3 text-sm font-medium text-teal-700 sm:mt-4">60 min | 90 min | 120 min</p>
+              <p className="flex justify-center mt-3 text-sm font-medium text-teal-700 sm:mt-4">60 min | 90 min</p>
             </div>
 
             {/* Foot Soak & Reflexology */}
             <div className="rounded-lg bg-white p-4 shadow-sm transition-all hover:shadow-md sm:p-6">
               <div className="mb-3 h-40 overflow-hidden rounded-md sm:h-48 sm:mb-4">
                 <Image
-                  src="/minimalist-foot-spa.png"
+                  src="/footsoak-room-2.jpg"
                   alt="Foot Soak & Reflexology"
                   width={600}
                   height={400}
                   className="h-full w-full object-cover"
                   sizes="(min-width: 768px) 33vw, 100vw"
+                  loading="lazy"
+                  quality={75}
                 />
               </div>
               <h3 className="font-serif text-lg font-medium text-teal-900 sm:text-xl">Foot Soak & Reflexology</h3>
@@ -147,16 +157,16 @@ export default function Home() {
                 Begin with a therapeutic herbal foot soak followed by targeted reflexology to stimulate energy pathways
                 and promote whole-body wellness.
               </p>
-              <p className="mt-3 text-sm font-medium text-teal-700 sm:mt-4">45 min | 60 min</p>
+              <p className="flex justify-center mt-3 text-sm font-medium text-teal-700 sm:mt-4">30 min</p>
             </div>
           </div>
 
           <div className="mt-8 text-center sm:mt-10">
             <Button
               asChild
-              className="w-full bg-teal-700 px-6 hover:bg-teal-800 sm:w-auto"
+              className="flex items-center justify-center gap-2 mx-auto bg-teal-700 px-6 py-6 text-base hover:bg-teal-800 sm:w-auto sm:py-4"
             >
-              <Link href="/services">View All Services</Link>
+              <Link href="/services" className="flex items-center justify-center gap-2 text-white">View All Services</Link>
             </Button>
           </div>
         </div>
@@ -188,22 +198,26 @@ export default function Home() {
       </section> */}
 
       {/* Contact & Location */}
-      <section className="bg-teal-50 px-4 py-12 sm:py-20">
+      <section id="contact" className="bg-teal-50 px-4 py-12 sm:py-20">
         <div className="container mx-auto max-w-5xl">
-          <div className="flex flex-col gap-8 md:flex-row md:gap-12">
-            <div className="md:w-1/2">
-              <h2 className="font-serif text-2xl font-light text-teal-900 sm:text-3xl">Visit Our Sanctuary</h2>
-              <p className="mt-4 text-sm text-slate-600 sm:mt-6 sm:text-base">
+          <div className="grid gap-4 md:gap-8 md:grid-cols-2">
+            {/* Sanctuary Description */}
+            <div className="flex flex-col items-center justify-center gap-6 md:gap-24 rounded-lg bg-teal-100 p-6 md:p-8 border-2 border-black">
+              <h2 className="font-serif text-center text-2xl font-light text-teal-900 sm:text-3xl">Visit Our Sanctuary</h2>
+              <p className="mt-2 md:mt-4 text-sm text-center text-slate-600 sm:mt-6 sm:text-base">
                 Located in the heart of Frostproof, Florida, The Cove offers a peaceful retreat from the demands of
                 daily life. Our tranquil space is designed to engage all your senses and facilitate deep relaxation.
               </p>
-
-              <div className="mt-6 space-y-4 sm:mt-8">
+            </div>
+  
+            {/* Contact Details */}
+            <div className="flex flex-col items-center justify-center gap-6 md:gap-24">
+              <div className="w-full space-y-4">
                 <div className="flex items-start">
                   <MapPin className="mr-3 h-5 w-5 text-teal-700" />
                   <div>
                     <p className="font-medium text-teal-900">The Cove</p>
-                    <p className="text-sm text-slate-600 sm:text-base">123 Serenity Lane</p>
+                    <p className="text-sm text-slate-600 sm:text-base">205 N Scenic Hwy</p>
                     <p className="text-sm text-slate-600 sm:text-base">Frostproof, FL 33843</p>
                   </div>
                 </div>
@@ -212,8 +226,12 @@ export default function Home() {
                   <Clock className="mr-3 h-5 w-5 text-teal-700" />
                   <div>
                     <p className="font-medium text-teal-900">Hours</p>
-                    <p className="text-sm text-slate-600 sm:text-base">Tuesday - Saturday: 9am - 7pm</p>
-                    <p className="text-sm text-slate-600 sm:text-base">Sunday - Monday: Closed</p>
+                    <p className="text-sm text-slate-600 sm:text-base">Monday - Tuesday: 9am - 5pm</p>
+                    <p className="text-sm text-slate-600 sm:text-base">Wednesday: Closed</p>
+                    <p className="text-sm text-slate-600 sm:text-base">Thursday: 9am - 5pm</p>
+                    <p className="text-sm text-slate-600 sm:text-base">Friday: 9am - 6pm</p>
+                    <p className="text-sm text-slate-600 sm:text-base">Saturday: 9:30am - 1pm</p>
+                    <p className="text-sm text-slate-600 sm:text-base">Sunday: Closed</p>
                   </div>
                 </div>
 
@@ -232,21 +250,31 @@ export default function Home() {
                     <p className="text-sm text-slate-600 sm:text-base">thecovesanctuary@gmail.com</p>
                   </div>
                 </div>
+                <div className="flex items-center">
+                  <Instagram className="mr-3 h-5 w-5 text-teal-700" />
+                  <div>
+                    <p className="font-medium text-teal-900">Instagram</p>
+                    <Link href="https://www.instagram.com/covesanctuaryfl" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-600 hover:text-teal-700 sm:text-base">
+                      @covesanctuaryfl
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="mr-3 h-5 w-5 text-teal-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" />
+                  </svg>
+                  <div>
+                    <p className="font-medium text-teal-900">TikTok</p>
+                    <Link href="https://www.tiktok.com/@itsalex0777" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-600 hover:text-teal-700 sm:text-base">
+                      @itsalex0777
+                    </Link>
+                  </div>
+                </div>
               </div>
 
-              <div className="mt-6 sm:mt-8">
-                <BookingButton className="w-full bg-teal-700 px-6 hover:bg-teal-800 sm:w-auto">Book Your Experience</BookingButton>
+              <div className="w-full">
+                <BookingButton className="w-full bg-teal-700 px-6 hover:bg-teal-800">Book Your Experience</BookingButton>
               </div>
-            </div>
-
-            <div className="relative h-[250px] w-full overflow-hidden rounded-lg sm:h-[300px] md:h-[400px] md:w-1/2">
-              <Image
-                src="/teal-tranquility.png"
-                alt="The Cove Spa Interior"
-                fill
-                className="object-cover"
-                sizes="(min-width: 768px) 50vw, 100vw"
-              />
             </div>
           </div>
         </div>
@@ -266,22 +294,22 @@ export default function Home() {
                 <h4 className="text-xs font-medium uppercase text-teal-300 sm:text-sm">Services</h4>
                 <ul className="mt-3 space-y-2 text-xs sm:mt-4 sm:text-sm">
                   <li>
-                    <Link href="#" className="hover:text-white">
+                    <Link href="/services" className="hover:text-white">
                       Japanese Head Spa
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-white">
+                    <Link href="/services" className="hover:text-white">
                       Therapeutic Massage
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-white">
+                    <Link href="/services" className="hover:text-white">
                       Foot Soaks
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-white">
+                    <Link href="/services" className="hover:text-white">
                       Packages
                     </Link>
                   </li>
@@ -292,25 +320,25 @@ export default function Home() {
                 <h4 className="text-xs font-medium uppercase text-teal-300 sm:text-sm">Company</h4>
                 <ul className="mt-3 space-y-2 text-xs sm:mt-4 sm:text-sm">
                   <li>
-                    <Link href="#" className="hover:text-white">
+                    <Link href="/#about" className="hover:text-white">
                       About Us
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-white">
+                    <Link href="/#about" className="hover:text-white">
                       Our Team
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="#" className="hover:text-white">
                       Testimonials
                     </Link>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <Link href="#" className="hover:text-white">
                       Blog
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
 

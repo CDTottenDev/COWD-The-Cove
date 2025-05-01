@@ -40,7 +40,7 @@ export default function RootLayout({
               <a href="/" className="text-sm text-slate-600 hover:text-teal-700">
                 Home
               </a>
-              <a href="/about" className="text-sm text-slate-600 hover:text-teal-700">
+              <a href="/#about" className="text-sm text-slate-600 hover:text-teal-700">
                 About
               </a>
               <a href="/services" className="text-sm text-slate-600 hover:text-teal-700">
@@ -49,7 +49,7 @@ export default function RootLayout({
               {/* <a href="/testimonials" className="text-sm text-slate-600 hover:text-teal-700">
                 Testimonials
               </a> */}
-              <a href="/contact" className="text-sm text-slate-600 hover:text-teal-700">
+              <a href="/#contact" className="text-sm text-slate-600 hover:text-teal-700">
                 Contact
               </a>
             </nav>
