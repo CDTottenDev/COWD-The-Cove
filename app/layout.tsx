@@ -21,6 +21,11 @@ export const metadata: Metadata = {
     "Experience the art of relaxation through our signature Japanese head spa treatments, therapeutic massages, and rejuvenating foot soaks at The Cove in Frostproof, Florida.",
   keywords:
     "massage spa, Japanese head spa, foot soak, wellness, relaxation, Frostproof, Florida, Alexandra Cortez, massage therapy",
+  icons: {
+    icon: '/favicon-16x16.png',
+    shortcut: '/favicon-16x16.png',
+    apple: '/favicon-16x16.png',
+  },
 }
 
 export default function RootLayout({
