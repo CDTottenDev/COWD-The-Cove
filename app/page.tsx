@@ -230,7 +230,7 @@ export default function Home() {
                     <p className="text-sm text-slate-600 sm:text-base">Wednesday: Closed</p>
                     <p className="text-sm text-slate-600 sm:text-base">Thursday: 9am - 5pm</p>
                     <p className="text-sm text-slate-600 sm:text-base">Friday: 9am - 6pm</p>
-                    <p className="text-sm text-slate-600 sm:text-base">Saturday: 9:30am - 1pm</p>
+                    <p className="text-sm text-slate-600 sm:text-base">Saturday: 9:30am - 4pm</p>
                     <p className="text-sm text-slate-600 sm:text-base">Sunday: Closed</p>
                   </div>
                 </div>
