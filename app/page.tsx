@@ -114,6 +114,7 @@ export default function Home() {
                 tension and promote deep relaxation.
               </p>
               <p className="flex justify-center mt-3 text-sm font-medium text-teal-700 sm:mt-4">60 min | 90 min</p>
+              <BookingButton className="mt-4 w-full">Book Now</BookingButton>
             </div>
 
             {/* Therapeutic Massage */}
@@ -136,6 +137,7 @@ export default function Home() {
                 alleviate pain and improve mobility.
               </p>
               <p className="flex justify-center mt-3 text-sm font-medium text-teal-700 sm:mt-4">60 min | 90 min</p>
+              <BookingButton className="mt-4 w-full">Book Now</BookingButton>
             </div>
 
             {/* Foot Soak & Reflexology */}
@@ -158,6 +160,7 @@ export default function Home() {
                 and promote whole-body wellness.
               </p>
               <p className="flex justify-center mt-3 text-sm font-medium text-teal-700 sm:mt-4">30 min</p>
+              <BookingButton className="mt-4 w-full">Book Now</BookingButton>
             </div>
           </div>
 
