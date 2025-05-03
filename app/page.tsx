@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { BookingButton } from "@/components/ui/booking-button"
+import { CTAButton } from "@/components/ui/cta-giftcard-button"
 import { ChevronRight, MapPin, Clock, Phone, Mail, Instagram } from "lucide-react"
 
 export default function Home() {
@@ -77,6 +78,49 @@ export default function Home() {
                   At The Cove, Alexandra has created a sanctuary where clients can disconnect from the outside world and
                   embark on a journey of deep relaxation and renewal.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="cta-gift-cards" className="bg-teal-50 px-4 py-12 sm:py-20">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-center font-serif text-2xl font-light text-teal-900 sm:text-3xl">
+            Gift Cards
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-teal-600 sm:mt-4 sm:text-base">
+            Give the gift of relaxation and renewal with a gift card.
+          </p>
+          <div className="mt-8 flex flex-col justify-center items-center">
+            <div className="flex justify-center gap-8 mb-2 sm:hidden">
+              <div className="animate-bounce text-teal-600">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </div>
+              <div className="animate-bounce text-teal-600">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div className="flex justify-center items-center gap-4">
+              <div className="animate-bounce text-teal-600 hidden sm:block">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+              <CTAButton className="w-full sm:w-auto">
+                Purchase a Gift Card
+              </CTAButton>
+              <div className="animate-bounce text-teal-600 hidden sm:block">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12 5 5 12 12 19"></polyline>
+                </svg>
               </div>
             </div>
           </div>
