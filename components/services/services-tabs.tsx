@@ -109,6 +109,16 @@ const treatments = {
   ],
   specials: [
     {
+      title: "Educator's Escape",
+      description: "Treat yourself to a well-deserved break with our 45-minute head spa session. Includes a relaxing scalp massage, tension-melting neck/shoulder massage and aromatherapy.",
+      image: "/head-treatment-ring.jpg"
+    },
+    {
+      title: "The Caregiver's Reset",
+      description: "Enjoy a 30-minute headspa with aromatherapy and a 30-minute therapeutic massage focused on the neck, shoulders, and back. This will help melt the stress away and leave you feeling refreshed and rejuvenated.",
+      image: "/head-treatment-ring.jpg"
+    },
+    {
       title: "Midday Melt",
       description: "(Available Mondays only, 11am-1pm By Appointment Only) Take a break form the busy day and treat yourself to a refreshing 30-minute massage designed to melt away tension and rechare your body and mind. Perfect for a quesck reset during your lunch hour-- you'll leave feeling lighter, calmer and ready to take on the rest of your day.",
       image: "/head-treatment-ring.jpg"
