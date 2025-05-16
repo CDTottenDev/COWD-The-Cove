@@ -122,21 +122,6 @@ const treatments = {
       title: "Midday Melt",
       description: "(Available Mondays only, 11am-1pm By Appointment Only) Take a break form the busy day and treat yourself to a refreshing 30-minute massage designed to melt away tension and rechare your body and mind. Perfect for a quesck reset during your lunch hour-- you'll leave feeling lighter, calmer and ready to take on the rest of your day.",
       image: "/head-treatment-ring.jpg"
-    },
-    {
-      title: "Mothers Day Head to Soul Bliss",
-      description: "Treat the special woman in your life to our luxurious Mother's Day package combining our most popular treatments. Beginning with The Cove Signature Head Spa that refreshes both scalp and spirit through personalized aromatherapy and botanical treatments, followed by our Rose Tidal Foot Soak that features dried rose petals and lavender in a mineral-rich bath. This head-to-toe experience provides the perfect balance of relaxation and rejuvenation.",
-      image: "/head-treatment-ring.jpg"
-    },
-    {
-      title: "Mothers Day Soak and Massage",
-      description: "Pamper your mother with our special day package combining two of our most popular treatments. Begin with our Rose Tidal Foot Soak, where dried rose petals and lavender buds swirl in a warm, mineral-rich bath to soften skin and quiet the mind. Then experience The Cove Custom Blend Massage, a fully personalized massage tailored to her unique needs with the perfect pressure, soothing hot stones, and cupping therapy for a truly restorative experience that will leave her feeling balanced and renewed.",
-      image: "/head-treatment-ring.jpg"
-    },
-    {
-      title: "Mothers Retreat",
-      description: "Indulge in our Mother's Retreat package, combining The Cove Custom Blend Massage and The Cove Signature Head Spa for the ultimate relaxation experience. Begin with our personalized massage that incorporates your preferred pressure, soothing hot stones, and cupping therapy to release tension and restore balance. Then transition to our luxurious head spa featuring aromatherapy, gentle exfoliation, and a botanical hair rinse with oil scalp massage. This comprehensive treatment refreshes both body and mind, creating a truly restorative sanctuary for mothers.",
-      image: "/head-treatment-ring.jpg"
     }
   ]
 } as const
