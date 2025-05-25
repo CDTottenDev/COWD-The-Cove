@@ -14,16 +14,6 @@ declare global {
 const treatments = {
   packages: [
     {
-      title: "The Cove Rejuvenation Journey",
-      description: "The Cove Rejuvenation Journey is a comprehensive package designed to rejuvenate your body and mind. It includes a signature head spa, a custom blend massage, and a foot soak. This package is perfect for those who want to experience the full benefits of The Cove.",
-      image: "/head-treatment-ring.jpg",
-    },
-    {
-      title: "The Tranquil Steps",
-      description: "Start with a therapeutic foot soak infused with essential oils and soothing salts to detoxify and soften tired feet. Then ease into a customized full-body massage that releases built-up stress and leaves you feeling light and renewed. The ultimate relaxation for body and soul.",
-      image: "/head-treatment-ring.jpg",
-    },
-    {
       title: "The Serenity Duo",
       description: "Melt away tension with a deeply relaxing full-body massage, tailored to your needs, followed by a luxurious Japanese Head Spa treatment designed to cleanse, rejuvenate, and invigorate your scalp and mind. This perfect pairing delivers full-body renewal and head-to-toe tranquility.",
       image: "/head-treatment-ring.jpg",
@@ -46,11 +36,6 @@ const treatments = {
       title: "The Cove Custom Blend Massage",
       description: "This fully personalized massage is designed to meet your unique needs—whether you're looking for deep tissue relief or gentle relaxation. Each session blends targeted techniques with your preferred pressure, and includes the soothing benefits of hot stones and cupping therapy. The result is a restorative experience that leaves you feeling balanced, relaxed, and renewed.",
       image: "/full-body-massage.jpg"
-    },
-    {
-      title: "Deep Relief Massage",
-      description: "Experience targeted muscle relief with our Deep Relief Massage at The Cove. This therapy focuses on alleviating chronic tension and muscle tightness through precise deep tissue techniques. Our skilled therapists apply deliberate pressure to reach deeper layers of muscle, helping to release knots and improve mobility. Ideal for those seeking relief from persistent discomfort, this massage promotes relaxation and restores balance to your body.",
-      image: "/services/deep-relief-massage.jpg"
     },
     {
       title: "PreNatal Massage",
@@ -92,16 +77,6 @@ const treatments = {
       image: "/services/cold-globes-and-eye-mask.jpg"
     },
     {
-      title: "Foot Massage",
-      description: "Indulge in our rejuvenating Foot Massage add-on, designed to enhance your wellness experience. This targeted treatment focuses on relieving tension and promoting relaxation through expert pressure point techniques. Our skilled therapist works to improve circulation, reduce fatigue, and restore balance to your feet—the foundation of your body. Perfect for those seeking additional relief after a long day or as a luxurious complement to any of our core services.",
-      image: "/services/foot-massage.jpg"
-    },
-    {
-      title: "Décolleté & Arm/Hand Massage",
-      description: "Pamper your upper body with our Décolleté & Arm/Hand Massage add-on. This luxurious treatment focuses on often-neglected areas, releasing tension in your arms and hands. Our skilled therapist uses gentle, flowing techniques to improve circulation, reduce stiffness, and restore mobility. Perfect for those who work with their hands or experience upper body tension, this add-on brings balance and relief to complete your wellness experience.",
-      image: "/services/decollate-arm-hand-massage.jpg"
-    },
-    {
       title: "Facial Cupping Facial Massage",
       description: "Experience the ancient art of facial cupping with our specialized massage add-on. This gentle suction technique helps stimulate circulation, reduce puffiness, and enhance your skin's natural glow. The rhythmic movements promote collagen production, soften fine lines, and create a lifting effect. Perfect for those seeking both relaxation and rejuvenation, this treatment leaves your skin looking refreshed and radiant while providing a deeply soothing experience.",
       image: "/services/facial-cupping-facial-massage.jpg"
@@ -109,13 +84,18 @@ const treatments = {
   ],
   specials: [
     {
-      title: "Educator's Escape",
+      title: "Coastal Calm",
       description: "Treat yourself to a well-deserved break with our 45-minute head spa session. Includes a relaxing scalp massage, tension-melting neck/shoulder massage and aromatherapy.",
       image: "/head-treatment-ring.jpg"
     },
     {
-      title: "The Caregiver's Reset",
+      title: "Salt & Serenity",
       description: "Enjoy a 30-minute headspa with aromatherapy and a 30-minute therapeutic massage focused on the neck, shoulders, and back. This will help melt the stress away and leave you feeling refreshed and rejuvenated.",
+      image: "/head-treatment-ring.jpg"
+    },
+    {
+      title: "Sunset Unwind",
+      description: "60-minute therapeutic massage uses breezy summer oils and flowing techniques to help you let go and glow.",
       image: "/head-treatment-ring.jpg"
     },
     {
