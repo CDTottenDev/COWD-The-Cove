@@ -19,7 +19,7 @@ User-agent: CCBot
 Allow: /
 
 # Sitemap location
-Sitemap: https://thecove.com/sitemap.xml
+Sitemap: https://www.cove-sanctuaryofwellness.com/sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /admin/
