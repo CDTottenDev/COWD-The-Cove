@@ -57,6 +57,9 @@ export default function RootLayout({
               <a href="/#contact" className="text-sm text-slate-600 hover:text-teal-700">
                 Contact
               </a>
+              <a href="/blog" className="text-sm text-slate-600 hover:text-teal-700">
+                Blog
+              </a>
             </nav>
             <div className="flex items-center gap-2">
               <div className="hidden sm:block">
