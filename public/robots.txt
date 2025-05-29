@@ -1,0 +1,49 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Specific rules for Google AI crawlers
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://thecove.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Crawl-delay for all bots
+Crawl-delay: 10
+
+# Additional AI crawler specific rules
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Allow access to important content
+Allow: /blog/
+Allow: /services/
+Allow: /about/
+Allow: /contact/
+
+# Optimize for AI content understanding
+Allow: /sitemap.xml
+Allow: /robots.txt 
