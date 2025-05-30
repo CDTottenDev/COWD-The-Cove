@@ -51,9 +51,9 @@ export default function RootLayout({
               <a href="/services" className="text-sm text-slate-600 hover:text-teal-700">
                 Services
               </a>
-              {/* <a href="/testimonials" className="text-sm text-slate-600 hover:text-teal-700">
+              <a href="/#testimonials" className="text-sm text-slate-600 hover:text-teal-700">
                 Testimonials
-              </a> */}
+              </a>
               <a href="/#contact" className="text-sm text-slate-600 hover:text-teal-700">
                 Contact
               </a>

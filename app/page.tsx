@@ -220,7 +220,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-white px-4 py-12 sm:py-20">
+      <section id="testimonials" className="bg-white px-4 py-12 sm:py-20">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-center font-serif text-2xl font-light text-teal-900 sm:text-3xl">Client Experiences</h2>
 
