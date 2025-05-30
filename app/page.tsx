@@ -389,8 +389,8 @@ export default function Home() {
                   <div>
                     <p className="font-medium text-teal-900">Hours</p>
                     <p className="text-sm text-slate-600 sm:text-base">Monday - Tuesday: 9am - 5pm</p>
-                    <p className="text-sm text-slate-600 sm:text-base">Wednesday: Closed</p>
-                    <p className="text-sm text-slate-600 sm:text-base">Thursday: 9am - 5pm</p>
+                    <p className="text-sm text-slate-600 sm:text-base">Wednesday: 9am - 5pm</p>
+                    <p className="text-sm text-slate-600 sm:text-base">Thursday: Closed</p>
                     <p className="text-sm text-slate-600 sm:text-base">Friday: 9am - 6pm</p>
                     <p className="text-sm text-slate-600 sm:text-base">Saturday: 9:30am - 4pm</p>
                     <p className="text-sm text-slate-600 sm:text-base">Sunday: Closed</p>
@@ -491,16 +491,16 @@ export default function Home() {
                       Our Team
                     </Link>
                   </li>
-                  {/* <li>
-                    <Link href="#" className="hover:text-white">
+                  <li>
+                    <Link href="/#testimonials" className="hover:text-white">
                       Testimonials
                     </Link>
-                  </li> */}
-                  {/* <li>
-                    <Link href="#" className="hover:text-white">
+                  </li>
+                  <li>
+                    <Link href="/#blog" className="hover:text-white">
                       Blog
                     </Link>
-                  </li> */}
+                  </li>
                 </ul>
               </div>
 
