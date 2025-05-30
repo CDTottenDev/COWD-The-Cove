@@ -19,29 +19,51 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="container relative z-10 mx-auto max-w-5xl text-center bg-teal-50 opacity-80 p-8">
-          <h1 className="font-serif text-4xl font-light tracking-tight text-teal-900 sm:text-5xl md:text-6xl lg:text-7xl">
-            The Cove
-          </h1>
-          <p className="mt-4 text-xl font-light text-teal-700 sm:text-2xl md:text-3xl">A Sanctuary of Wellness</p>
-          <p className="mx-auto mt-6 max-w-2xl text-base text-teal-600 sm:text-lg md:text-xl">
-            Experience the art of relaxation through our signature Japanese head spa treatments, therapeutic massages,
-            and rejuvenating foot soaks.
-          </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
-            <BookingButton className="w-full sm:w-auto">
-              Book an Appointment
-            </BookingButton>
-            <Button
-              asChild
-              variant="outline"
-              className="w-full border-teal-200 text-teal-700 sm:w-auto"
-            >
-              <Link href="#services" className="flex items-center justify-center gap-2">
-                Explore Our Services
-                <ChevronRight className="h-4 w-4" />
-              </Link>
-            </Button>
+        <div className="container relative z-10 mx-auto max-w-5xl text-center bg-teal-50 opacity-80 p-8 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="relative w-full md:w-1/4 h-[200px] md:h-[400px] order-1 md:order-none">
+            <Image
+              src="/images/pro pics/13.jpeg"
+              alt="Left decorative image"
+              fill
+              className="object-cover rounded-lg object-[center_10%] md:object-center"
+              sizes="(min-width: 768px) 25vw, 100vw"
+              priority
+            />
+          </div>
+          <div className="flex-1 order-2 md:order-none">
+            <h1 className="font-serif text-4xl font-light tracking-tight text-teal-900 sm:text-5xl md:text-6xl lg:text-7xl">
+              The Cove
+            </h1>
+            <p className="mt-4 text-xl font-light text-teal-700 sm:text-2xl md:text-3xl">A Sanctuary of Wellness</p>
+            <p className="mx-auto mt-6 max-w-2xl text-base text-teal-600 sm:text-lg md:text-xl">
+              Experience the art of relaxation through our signature Japanese head spa treatments, therapeutic massages,
+              and rejuvenating foot soaks.
+            </p>
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+              <BookingButton className="w-full sm:w-auto">
+                Book an Appointment
+              </BookingButton>
+              <Button
+                asChild
+                variant="outline"
+                className="w-full border-teal-200 text-teal-700 sm:w-auto"
+              >
+                <Link href="#services" className="flex items-center justify-center gap-2">
+                  Explore Our Services
+                  <ChevronRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+          <div className="hidden md:block relative w-full md:w-1/4 h-[200px] md:h-[400px] order-3 md:order-none">
+            <Image
+              src="/images/pro pics/image1.jpeg"
+              alt="Right decorative image"
+              fill
+              className="object-cover rounded-lg"
+              sizes="(min-width: 768px) 25vw, 100vw"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -52,7 +74,7 @@ export default function Home() {
           <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
             <div className="relative h-[300px] w-full overflow-hidden rounded-lg sm:h-[400px] md:w-1/2">
               <Image
-                src="/alexandra-about.jpg"
+                src="/images/pro pics/image5.jpeg"
                 alt="Alexandra Cortez, Massage Specialist"
                 fill
                 className="object-cover"
@@ -142,7 +164,7 @@ export default function Home() {
             <div className="rounded-lg bg-white p-4 shadow-sm transition-all hover:shadow-md sm:p-6">
               <div className="mb-3 h-40 overflow-hidden rounded-md sm:h-48 sm:mb-4">
                 <Image
-                  src="/headspa-sink-2.jpg"
+                  src="/images/pro pics/image4.jpeg"
                   alt="Japanese Head Spa"
                   width={600}
                   height={400}
@@ -165,7 +187,7 @@ export default function Home() {
             <div className="rounded-lg bg-white p-4 shadow-sm transition-all hover:shadow-md sm:p-6">
               <div className="mb-3 h-40 overflow-hidden rounded-md sm:h-48 sm:mb-4">
                 <Image
-                  src="/massage-room-2.jpg"
+                  src="/images/pro pics/55.jpeg"
                   alt="Therapeutic Massage"
                   width={600}
                   height={400}
@@ -188,7 +210,7 @@ export default function Home() {
             <div className="rounded-lg bg-white p-4 shadow-sm transition-all hover:shadow-md sm:p-6">
               <div className="mb-3 h-40 overflow-hidden rounded-md sm:h-48 sm:mb-4">
                 <Image
-                  src="/footsoak-room-2.jpg"
+                  src="/images/pro pics/22.jpeg"
                   alt="Foot Soak & Reflexology"
                   width={600}
                   height={400}
@@ -334,6 +356,15 @@ export default function Home() {
           <div className="grid gap-4 md:gap-8 md:grid-cols-2">
             {/* Sanctuary Description */}
             <div className="flex flex-col items-center justify-center gap-6 md:gap-24 rounded-lg bg-teal-100 p-6 md:p-8 border-2 border-black">
+              <div className="relative w-full aspect-[4/3] mb-4">
+                <Image
+                  src="/images/pro pics/5.jpeg"
+                  alt="The Cove Sanctuary"
+                  fill
+                  className="object-cover rounded-lg"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+              </div>
               <h2 className="font-serif text-center text-2xl font-light text-teal-900 sm:text-3xl">Visit Our Sanctuary</h2>
               <p className="mt-2 md:mt-4 text-sm text-center text-slate-600 sm:mt-6 sm:text-base">
                 Located in the heart of Frostproof, Florida, The Cove offers a peaceful retreat from the demands of
